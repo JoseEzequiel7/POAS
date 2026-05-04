@@ -1,8 +1,7 @@
-from sqlmodel import SQLModel , Field
+from sqlmodel import SQLModel, Field
 
-class tarefa(SQLModel, table=True):
-    id:int | None = Field(default=None , primary_key=True)
+class Tarefa(SQLModel,table=True):
+    id:int |None = Field(default=None,primary_key=True)
     nome:str = Field(index=False)
     descricao:str = Field(index=False)
     status:bool = Field(default=False)
-    
